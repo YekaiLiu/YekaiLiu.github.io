@@ -1,2 +1,92 @@
-hello Tesla Einstein Newton Hawking Riemann Maxwell Faraday Boltzmann......
-<img src="hello.png" alt="hello science">
+<head>
+    <title>hello world</title>
+
+    <!-- Oh! Why should the spirit of mortal be proud? -->
+    <style>
+        h1 {
+            color: green;
+        }
+          
+        h2 {
+            font-family: Impact;
+        }
+          
+        body {
+            text-align: center;
+        }
+
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        iframe{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+
+  
+<body>
+    <h2>hello a world with science and technology</h2>
+    <h2>hello a world with mortal spirits but great minds</h2>
+    <!--   -->
+
+    <h1>hello Tesla Einstein Newton Hawking...</h1>
+    <img src="hello.png" alt="hello science">
+    <h1>hello Riemann Maxwell Faraday Boltzmann...</h1>
+    
+    <p>
+        To view the images of Boltzmann and Riemann, double click
+        the button below:
+    </p>
+    <!-- <br> -->
+    
+    <button ondblclick="boltzmann()">
+        View Image
+    </button>
+    <h2>Science and technology can create great minds and vice versa.</h2>
+    <img id="boltzmann" src="boltzmann2.jpg" style="display:none;" width="300" height="300" > </img>
+    <img id="Riemann" src="Riemann.jpeg" style="display:none;" width="300" height="300" >  </img>
+    <script>
+        function boltzmann() {
+          document.getElementById('boltzmann').style.display='block';    
+          document.getElementById('Riemann').style.display='block';   
+        }
+    </script>
+
+    <p>
+        To hide the above images, click
+        the button below:
+    </p>
+
+    
+    <button onclick="boltzmannhide()">
+        Hide Image
+    </button>
+
+
+    <br>
+    
+    <p id="demo"></p>
+
+    <iframe id="poem" src="https://www.bartleby.com/library/song/60.html" width="650" height="700" style="display:none;" scrolling="yes" class="center"> </iframe>
+
+    <!--
+    <iframe src="https://www.loc.gov/resource/rbpe.1580380a/?st=text" width="800" height="2000"></iframe>
+    -->
+    
+
+    <script>
+        function boltzmannhide() {
+          document.getElementById('boltzmann').style.display='none';    
+          document.getElementById('Riemann').style.display='none';   
+          document.getElementById("demo").innerHTML = "President Lincoln's favorite poem: Oh! why should the spirit of mortal be proud? ... Philadelphia A. W. Auner, song publisher. [Ca. 1864]. from the Library of Congress.";
+          document.getElementById('poem').style.display='block';        
+        }
+    </script>
+</body>
+  
+</html>
