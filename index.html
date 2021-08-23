@@ -34,9 +34,9 @@
     <h2>hello a world with mortal spirits but great minds</h2>
     <!--   -->
 
-    <h1>hello Tesla Einstein Newton Hawking...</h1>
+    <h1>Tesla Einstein Newton Hawking...</h1>
     <img src="hello.png" alt="hello science">
-    <h1>hello Riemann Maxwell Faraday Boltzmann...</h1>
+    <h1>Riemann Maxwell Faraday Boltzmann...</h1>
     
     <p>
         To view the images of Boltzmann and Riemann, double click
@@ -48,7 +48,7 @@
         View Image
     </button>
     <h2>Science and technology can create great minds and vice versa.</h2>
-    <img id="boltzmann" src="Boltzmann2.jpg" style="display:none;" width="300" height="300" > </img>
+    <img id="boltzmann" src="boltzmann.png" style="display:none;" width="300" height="300" > </img>
     <img id="Riemann" src="Riemann.jpeg" style="display:none;" width="300" height="300" >  </img>
     <script>
         function boltzmann() {
@@ -67,10 +67,19 @@
         Hide Image
     </button>
 
+    <br>
+    <p>
+        To read the poem, click
+        the button below:
+    </p>
+
+ 
+    <button onclick="poem()">
+        Read Poem
+    </button>
+    <p id="demo"></p>
 
     <br>
-    
-    <p id="demo"></p>
 
     <iframe id="poem" src="https://www.bartleby.com/library/song/60.html" width="650" height="700" style="display:none;" scrolling="yes" class="center"> </iframe>
 
@@ -82,11 +91,18 @@
     <script>
         function boltzmannhide() {
           document.getElementById('boltzmann').style.display='none';    
-          document.getElementById('Riemann').style.display='none';   
-          document.getElementById("demo").innerHTML = "President Lincoln's favorite poem: Oh! why should the spirit of mortal be proud? ... Philadelphia A. W. Auner, song publisher. [Ca. 1864]. from the Library of Congress.";
-          document.getElementById('poem').style.display='block';        
+          document.getElementById('Riemann').style.display='none';        
         }
     </script>
+
+    <script>
+        function poem() {
+          document.getElementById("demo").innerHTML = "President Lincoln's favorite poem: Oh! why should the spirit of mortal be proud? ... Philadelphia A. W. Auner, song publisher. [Ca. 1864]. from the Library of Congress.";
+          document.getElementById('poem').style.display='block';    
+        }
+    </script>
+
+     
 </body>
   
 </html>
