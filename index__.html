@@ -206,10 +206,8 @@
     不知道为什么 baidu api的src必须放在map js定义函数的前面，但google的api src引用可以放在最后无论哪里都可以。。
     但是它们其实都只需要三个部分 ，第一个部分是上面的这种src=api url，第二个是定义一个map生成的函数其中会生成map的id，第三个就是上面的div  id=mapid 就可以把地图显示在html里了。
     -->
-
-    <!-Baidu Map Javascript->  
+    <!-Baidu Map Javascript->
     <script type = "text/javascript">
-    //2021-08-24 15:36:43 (EDT) 我还是不懂为什么不像按钮调用的那些函数就算定义在script里了不调用也不会执行，百度的是先定义，然后scripit里自己调用了自己定义的函数来执行和生成地图，但为什么谷歌这个scripit里面只定义不调用就执行了。
     //Create and initialize the map function:
         function initMap () {
             createMap ();//Create a map
@@ -269,7 +267,7 @@
             map.addControl (overviewControl);
         }
         var map;
-        initMap (); //百度map就要执行一遍这个函数，不像google里只定义了函数都没有调用。。可能是google map id自动调用了这个函数？
+        initMap ();
     </script>
     <!-Baidu Map Javascript->
 
@@ -281,13 +279,12 @@
  
 
     <script>
-    ////2021-08-24 15:36:43 (EDT) 我还是不懂为什么不像按钮调用的那些函数就算定义在script里了不调用也不会执行，百度的是先定义，然后scripit里自己调用了自己定义的函数来执行和生成地图，但为什么谷歌这个scripit里面只定义不调用就执行了。
     function myMap() {
     var mapProp= {
     center:new google.maps.LatLng(30.5435401,117.0620949),
     zoom:13.17,
     };
-    new google.maps.Map(document.getElementById("googleMap"),mapProp); //可能这里这个 document.getElementById("googleMap")而不是 直接填id 就保证了就算这个scripit里的函数不被调用只要div出现了相应id 也就会自动执行吧
+    new google.maps.Map(document.getElementById("googleMap"),mapProp); 
     //var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);  //可能是这里就算不主动调用这个函数也会生成googlemap的id吧。。反正百度谷歌地图api webpage现在都会用了，12个小时过去了。。
     }
     </script>
@@ -301,10 +298,7 @@
 
    
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUAXkoiSYXvpH0X1SdsSRDegpDWnEvCI&callback=myMap">
-    //原来//要写在script体内代表是js scripit就能comment 了吗。。不然还不可以
-    // 这个谷歌map api放哪都可以。。
-    </script> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUAXkoiSYXvpH0X1SdsSRDegpDWnEvCI&callback=myMap"></script>
     
     
     
