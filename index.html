@@ -1,11 +1,14 @@
 <head>
     <title>hello sci-tech world</title>
+   
+
+    
 
 
 
     <!-- Oh! Why should the spirit of mortal be proud? -->
     <style>
-
+     
 
 
         .column {
@@ -173,6 +176,9 @@
     <br>
     <p>Anqing, Anhui--My Birthplace and China's Hometown of Huangmei Opera</p>
 
+    
+    <!--  https://titanwolf.org/Network/Articles/Article?AID=fe749147-9142-4760-b8db-a0971d713b5b#gsc.tab=0 这里有上面的百度api src-->
+
     <div id="anqing" style="display:inline-block;">
         <div class="column_reverse">
              <video src="Aerial China：Anqing, Anhui 安徽安慶 China's -Hometown of Drama-_2.mp4" controls    style = "width: 800px; height: 450px">
@@ -187,11 +193,18 @@
         <div class="column_reverse" id="googleMap" style="width:100%;height:450px;"></div>
     </div>
 
+
+
     
- 
 
+    
+    
    
-
+    <script src = "https://api.map.baidu.com/api?v=2.0&ak=7GAxnzcDaWjbiLx19K3Hge1OKBuK5alo"> </script> 
+    <!--
+    不知道为什么 baidu api的src必须放在map js定义函数的前面，但google的api src引用可以放在最后无论哪里都可以。。
+    但是它们其实都只需要三个部分 ，第一个部分是上面的这种src=api url，第二个是定义一个map生成的函数其中会生成map的id，第三个就是上面的div  id=mapid 就可以把地图显示在html里了。
+    -->
     <!-Baidu Map Javascript->
     <script type = "text/javascript">
     //Create and initialize the map function:
@@ -257,6 +270,10 @@
     </script>
     <!-Baidu Map Javascript->
 
+    
+
+    
+
 
  
 
@@ -271,15 +288,17 @@
     </script>
 
      
-    <script type = "text/javascript" src = "https://api.map.baidu.com/api?v=2.0&ak=7GAxnzcDaWjbiLx19K3Hge1OKBuK5alo"> </script>
+    
     
    
-    <!--  https://titanwolf.org/Network/Articles/Article?AID=fe749147-9142-4760-b8db-a0971d713b5b#gsc.tab=0 这里有上面的百度api src-->
+
 
 
     //<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3Vm6mK5oCjiSzaWBbtNMHWxayktxWWLI&callback=myMap"></script>
-    
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUAXkoiSYXvpH0X1SdsSRDegpDWnEvCI&callback=myMap"></script>
+    
+    
     
 
      
