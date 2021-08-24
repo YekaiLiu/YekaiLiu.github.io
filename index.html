@@ -210,7 +210,7 @@
         }
         function createMap () {
             map = new BMap.Map ("map");
-            map.centerAndZoom (new BMap.Point (117.055099,30.520971), 17);
+            map.centerAndZoom (new BMap.Point (117.046099,30.519681), 18);
         }
         function setMapEvent () {
             //map.enableScrollWheelZoom ();  //原来在这里啊。。scroll wheel zoom就是鼠标滚轮移动。。
@@ -227,6 +227,10 @@
             var markers = [
                 {content: "My Note", title: "My Mark", imageOffset: {width: 0, height: 3}, position: {lat: 45.725295, lng: 126.64815}}
             ];
+
+13029605.939210525,3549044.643684212,19.73
+
+
             for (var index = 0; index <markers.length; index ++) {
                 var point = new BMap.Point (markers [index] .position.lng, markers [index] .position.lat);
                 var marker = new BMap.Marker (point, {icon: new BMap.Icon ("http://api.map.baidu.com/lbsapi/createmap/images/icon.png", new BMap.Size (20,25 ), {
@@ -266,14 +270,16 @@
     <script>
     function myMap() {
     var mapProp= {
-    center:new google.maps.LatLng(30.514224,117.0465776),
-    zoom:17,
+    center:new google.maps.LatLng(30.5435401,117.0620949),
+    zoom:13.17,
     };
     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
     }
     </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUAXkoiSYXvpH0X1SdsSRDegpDWnEvCI&callback=myMap"></script>
+    //<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUAXkoiSYXvpH0X1SdsSRDegpDWnEvCI&callback=myMap"></script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3vD5tWMv53OdvlChSfM1-IO18lXxym1g&callback=myMap"></script>
     
 
      
