@@ -269,7 +269,9 @@
             map.addControl (overviewControl);
         }
         var map;
-        initMap (); //百度map就要执行一遍这个函数，不像google里只定义了函数都没有调用。。可能是google map id自动调用了这个函数？
+        initMap (); //百度map就要最下面定义完还要 执行一遍这个函数，不然只用上面的scripit里的定义是不会执行定义的函数生成地图的！（或者用按钮引用才会执行定义的函数）
+        //不像google里script就只定义了函数都没有调用（没有scripit下面自己调用，也没有外面的html定义的开关调用）。。
+        //可能是google map id自动调用了这个函数？因为它有个getdocumentid？好像也不是啊，别的按钮的函数里也有这个，但也不会自动执行只是被定义的函数啊。。为什么呢谷歌，是api src里隐含的功能吧。。
     </script>
     <!-Baidu Map Javascript->
 
@@ -301,9 +303,10 @@
 
    
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUAXkoiSYXvpH0X1SdsSRDegpDWnEvCI&callback=myMap">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUAXkoiSYXvpH0X1SdsSRDegpDWnEvCI&callback=myMap"> 
     //原来//要写在script体内代表是js scripit就能comment 了吗。。不然还不可以
     // 这个谷歌map api放哪都可以。。
+    //这个api key在google cloud platform credentials里我设定的只能用于特定我自己的域名和url。所以外界调用这个key也被restricted了。
     </script> 
     
     
