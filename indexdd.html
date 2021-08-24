@@ -190,7 +190,7 @@
             <!-Baidu Map Container->
         </div>
 
-        <div  id="googleMap" style="width:100%;height:450px;"></div> 
+        <div class="column_reverse" id="googleMap" style="width:100%;height:450px;"></div> 
         <!--  加 class 就让width 100%的谷歌地图也能和上面的column宽度保持一致吧 %-->
     </div>
 
@@ -284,8 +284,7 @@
     center:new google.maps.LatLng(30.5435401,117.0620949),
     zoom:13.17,
     };
-    new google.maps.Map(document.getElementById("googleMap"),mapProp); 
-    //var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);  //可能是这里就算不主动调用这个函数也会生成googlemap的id吧。。反正百度谷歌地图api webpage现在都会用了，12个小时过去了。。
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);  //可能是这里就算不主动调用这个函数也会生成googlemap的id吧。。反正百度谷歌地图api webpage现在都会用了，12个小时过去了。。
     }
     </script>
 
@@ -296,7 +295,7 @@
 
 
 
-   
+    //<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3Vm6mK5oCjiSzaWBbtNMHWxayktxWWLI&callback=myMap"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUAXkoiSYXvpH0X1SdsSRDegpDWnEvCI&callback=myMap"></script>
     
