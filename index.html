@@ -289,8 +289,16 @@
     center:new google.maps.LatLng(30.5435401,117.0620949),
     zoom:13.17,
     };
-    new google.maps.Map(document.getElementById("googleMap"),mapProp); //可能这里这个 document.getElementById("googleMap")而不是 直接填id 就保证了就算这个scripit里的函数不被调用只要div出现了相应id 也就会自动执行吧
+    const anqing = { lat: 30.5435401, lng: 117.0620949 };
+    
+    var googleMap = new google.maps.Map(document.getElementById("googleMap"),mapProp); //可能这里这个 document.getElementById("googleMap")而不是 直接填id 就保证了就算这个scripit里的函数不被调用只要div出现了相应id 也就会自动执行吧
     //var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);  //可能是这里就算不主动调用这个函数也会生成googlemap的id吧。。反正百度谷歌地图api webpage现在都会用了，12个小时过去了。。
+    
+    const marker = new google.maps.Marker({
+    position: anqing,
+    map: googleMap,
+    });
+    
     }
     </script>
 
