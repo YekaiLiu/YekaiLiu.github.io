@@ -6,7 +6,6 @@
 
 
 
-    <!-- Oh! Why should the spirit of mortal be proud? -->
     <style>
      
 
@@ -71,11 +70,11 @@
   
 <body>
 
-    <a href="https://YekaiLiu.github.io/aboutme.github.io/">About me</a>
+    <a style="font-size: 30px;" href="https://YekaiLiu.github.io/aboutme.github.io/">About me </a>
     <h2>a world with science and technology</h2>
  
     <h2>a world with mortal spirits but great minds</h2>
-    <!--   -->
+  
 
     <h1>Tesla Einstein Newton Hawking...</h1>
     <img src="hello.png" alt="hello science"> </img>
@@ -85,16 +84,12 @@
         To view the images of Boltzmann and Riemann, double click
         the button below:
     </p>
-    <!-- <br> -->
-    
+  
     <button ondblclick="boltzmann()">
         View Image
     </button>
     <h2>Science and technology can create great minds and vice versa.</h2>
-    <!--
-    <img id="boltzmann" src="boltzmann.png" style="display:none;" width="300" height="300" > </img>
-    <img id="Riemann" src="Riemann.jpeg" style="display:none;" width="300" height="300" >  </img>
-    -->
+  
     
 
     <div id="img" style="display:none;">
@@ -144,9 +139,7 @@
 
     <iframe id="poem" src="https://www.bartleby.com/library/song/60.html" width="650" height="700" style="display:none;" > </iframe>
 
-    <!--
-    <iframe src="https://www.loc.gov/resource/rbpe.1580380a/?st=text" width="800" height="2000"></iframe>
-    -->
+  
     
 
     <script>
@@ -178,14 +171,12 @@
     <br>
     <p>Anqing, Anhui--My Birthplace and China's Hometown of Huangmei Opera</p>
 
-    
-    <!--  https://titanwolf.org/Network/Articles/Article?AID=fe749147-9142-4760-b8db-a0971d713b5b#gsc.tab=0 这里有上面的百度api src-->
 
     <div id="anqing" style="display:inline-block;">
         <div class="column_reverse">
              <video src="Aerial China：Anqing, Anhui 安徽安慶 China's -Hometown of Drama-_2.mp4" controls    style = "width: 800px; height: 450px">
         </div>
-  <!-- 我明白了 必须加这个controls在video后面，不然放不了，就是张图片显示而已-->
+
         <div class="column_reverse">
              <!-Baidu Map Container->
             <div style = "width: 400px; height: 450px; display: inline-block; border: #ccc solid 1px; font-size: 12px" id = "map"> </div>
@@ -193,8 +184,16 @@
         </div>
 
         <div  id="googleMap" style="width:100%;height:450px;"></div> 
-        <!--  加 class 就让width 100%的谷歌地图也能和上面的column宽度保持一致吧 好像不是 就算把class去了，gm还是一样的和上面的宽度自动一样了。。可能是因为它们都在最上面的一个div层级下面%--> 
+
     </div>
+
+    <br>
+    <br>
+    <br>
+  
+    <br>
+
+    <a style="font-size: 25px;" href="https://YekaiLiu.github.io/aboutme.github.io/">About me </a>
 
 
 
@@ -204,15 +203,11 @@
     
    
     <script src = "https://api.map.baidu.com/api?v=2.0&ak=7GAxnzcDaWjbiLx19K3Hge1OKBuK5alo"> </script> 
-    <!--
-    不知道为什么 baidu api的src必须放在map js定义函数的前面，但google的api src引用可以放在最后无论哪里都可以。。
-    但是它们其实都只需要三个部分 ，第一个部分是上面的这种src=api url，第二个是定义一个map生成的函数其中会生成map的id，第三个就是上面的div  id=mapid 就可以把地图显示在html里了。
-    -->
+
 
     <!-Baidu Map Javascript->  
     <script type = "text/javascript">
-    //2021-08-24 15:36:43 (EDT) 我还是不懂为什么不像按钮调用的那些函数就算定义在script里了不调用也不会执行，百度的是先定义，然后scripit里自己调用了自己定义的函数来执行和生成地图，但为什么谷歌这个scripit里面只定义不调用就执行了。
-    //Create and initialize the map function:
+
         function initMap () {
             createMap ();//Create a map
             setMapEvent ();//Set map event
@@ -224,7 +219,7 @@
             map.centerAndZoom (new BMap.Point (117.046099,30.519681), 18);
         }
         function setMapEvent () {
-            //map.enableScrollWheelZoom ();  //原来在这里啊。。scroll wheel zoom就是鼠标滚轮移动。。
+          
             map.enableKeyboard ();
             map.enableDragging ();
             map.enableDoubleClickZoom ()
@@ -271,9 +266,9 @@
             map.addControl (overviewControl);
         }
         var map;
-        initMap (); //百度map就要最下面定义完还要 执行一遍这个函数，不然只用上面的scripit里的定义是不会执行定义的函数生成地图的！（或者用按钮引用才会执行定义的函数）
-        //不像google里script就只定义了函数都没有调用（没有scripit下面自己调用，也没有外面的html定义的开关调用）。。
-        //可能是google map id自动调用了这个函数？因为它有个getdocumentid？好像也不是啊，别的按钮的函数里也有这个，但也不会自动执行只是被定义的函数啊。。为什么呢谷歌，是api src里隐含的功能吧。。
+        initMap (); 
+        
+
     </script>
     <!-Baidu Map Javascript->
 
@@ -285,7 +280,7 @@
  
 
     <script>
-    ////2021-08-24 15:36:43 (EDT) 我还是不懂为什么不像按钮调用的那些函数就算定义在script里了不调用也不会执行，百度的是先定义，然后scripit里自己调用了自己定义的函数来执行和生成地图，但为什么谷歌这个scripit里面只定义不调用就执行了。
+ 
     function myMap() {
     var mapProp= {
     center:new google.maps.LatLng(30.5435401,117.0620949),
@@ -294,8 +289,8 @@
     const anqing_beizheng_street = { lat: 30.5145637, lng: 117.0388954 };
  
 
-    var googleMap = new google.maps.Map(document.getElementById("googleMap"),mapProp); //可能这里这个 document.getElementById("googleMap")而不是 直接填id 就保证了就算这个scripit里的函数不被调用只要div出现了相应id 也就会自动执行吧
-    //var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);  //可能是这里就算不主动调用这个函数也会生成googlemap的id吧。。反正百度谷歌地图api webpage现在都会用了，12个小时过去了。。
+    var googleMap = new google.maps.Map(document.getElementById("googleMap"),mapProp); 
+   
     
     const marker = new google.maps.Marker({
         position: anqing_beizheng_street,
@@ -315,9 +310,7 @@
    
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUAXkoiSYXvpH0X1SdsSRDegpDWnEvCI&callback=myMap"> 
-    //原来//要写在script体内代表是js scripit就能comment 了吗。。不然还不可以
-    // 这个谷歌map api放哪都可以。。
-    //这个api key在google cloud platform credentials里我设定的只能用于特定我自己的域名和url。所以外界调用这个key也被restricted了。
+
     </script> 
     
     
