@@ -70,8 +70,10 @@
 
   
 <body>
+
+    <a href="https://YekaiLiu.github.io/aboutme.github.io/">About me</a>
     <h2>a world with science and technology</h2>
-    <h2>I love Sci-Tech!</h2>
+ 
     <h2>a world with mortal spirits but great minds</h2>
     <!--   -->
 
@@ -289,14 +291,15 @@
     center:new google.maps.LatLng(30.5435401,117.0620949),
     zoom:13.17,
     };
-    const anqing = { lat: 30.5435401, lng: 117.0620949 };
-    
+    const anqing_beizheng_street = { lat: 30.5145637, lng: 117.0388954 };
+ 
+
     var googleMap = new google.maps.Map(document.getElementById("googleMap"),mapProp); //可能这里这个 document.getElementById("googleMap")而不是 直接填id 就保证了就算这个scripit里的函数不被调用只要div出现了相应id 也就会自动执行吧
     //var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);  //可能是这里就算不主动调用这个函数也会生成googlemap的id吧。。反正百度谷歌地图api webpage现在都会用了，12个小时过去了。。
     
     const marker = new google.maps.Marker({
-    position: anqing,
-    map: googleMap,
+        position: anqing_beizheng_street,
+        map: googleMap,
     });
     
     }
